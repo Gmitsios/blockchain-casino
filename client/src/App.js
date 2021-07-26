@@ -192,7 +192,7 @@ class App extends Component {
 
         {
           this.state.lotteries.map((lottery) => (
-            <div key={lottery}>
+            <Row key={lottery} className="border mb-5">
               <p>{lottery}</p>
 
               <Row>
@@ -264,7 +264,7 @@ class App extends Component {
                 })
                 }</p>
             
-            </div>
+            </Row>
 
           ))
         }

@@ -1,1 +1,1 @@
-# blockchain-lottery
+# blockchain-casino
