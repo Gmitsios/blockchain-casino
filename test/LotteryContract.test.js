@@ -60,11 +60,6 @@ contract("Lottery Test", async (accounts) => {
     return expect(instance.enter({from: anotherAccount, value: web3.utils.toWei((parseInt(process.env.INITIAL_STAKE) - 10).toString(), "wei")})).to.be.rejected;
   });
 
-  // it('doesn\'t allow entries with more amount paid', async () => {
-  //   let instance = this.myLottery;
-  //   return expect(instance.enter({from: anotherAccount, value: web3.utils.toWei((parseInt(process.env.INITIAL_STAKE) + 10).toString(), "wei")})).to.be.rejected;
-  // });
-
   it('winner gets it all', async () => {
     let instance = this.myLottery;
     await instance.enter({from: someAccount, value: web3.utils.toWei(process.env.INITIAL_STAKE, "wei")});
@@ -72,7 +67,6 @@ contract("Lottery Test", async (accounts) => {
     await instance.enter({from: someAccount, value: web3.utils.toWei(process.env.INITIAL_STAKE, "wei")});
     await instance.enter({from: someAccount, value: web3.utils.toWei(process.env.INITIAL_STAKE, "wei")});
 
-    // expect(instance.pickWinner({from: deployerAccount})).to.be.fulfilled;
     return expect(instance.getPlayers()).to.eventually.be.empty;
   });
 

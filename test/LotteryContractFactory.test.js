@@ -1,4 +1,4 @@
-const Lottery = artifacts.require("LotteryContract");
+const Lottery = artifacts.require("LotteryContractAutoSettlement");
 const LotteryFactory = artifacts.require("LotteryContractFactory");
 
 const chai = require("./setupchai.js");
